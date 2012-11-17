@@ -5,7 +5,10 @@ gem 'rails', '3.2.9'
 # Bundle edge Rails instead:
 # gem 'rails', :git => 'git://github.com/rails/rails.git'
 
+gem "httparty", "~> 0.9.0"
+gem "hashie", "~> 1.2.0"
 
+gem 'sidekiq'
 
 # Gems used only for assets and not required
 # in production environments by default.
@@ -42,3 +45,4 @@ gem "database_cleaner", ">= 0.9.1", :group => :test
 gem "mongoid-rspec", ">= 1.4.6", :group => :test
 gem "email_spec", ">= 1.4.0", :group => :test
 gem "sendgrid", ">= 1.0.1"
+gem "quiet_assets", ">= 1.0.1", :group => :development
