@@ -1,0 +1,12 @@
+<p>
+Total results: <%= photos.count %>
+</p>
+<% photos.each do |photo| %>
+	<div>
+		<p>
+			Name: <%= photo.name %> <br />
+			Location: <%= photo.location.join(", ") %><br/>
+			Tags: <%= photo.tags.join(", ") %>
+		</p>
+	<%= link_to(image_tag(photo.image_urls["440"]).html_safe, "http://500px.com/photo/#{photo._id}") %>
+<% end %>
