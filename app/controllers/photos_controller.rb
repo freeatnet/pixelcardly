@@ -35,7 +35,7 @@ class PhotosController < ApplicationController
 
     respond_to do |f|
       f.json { render status: 400, json: {status: 400, message: "Page out of bounds"}}
-    end and return if rpp * params[:page].to_i > scope_count
+    end and return if page[:page].to_i > 1 and rpp * params[:page].to_i > scope_count
 
     offset = (params[:page].to_i - 1) * rpp
 
