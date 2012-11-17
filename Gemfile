@@ -35,3 +35,10 @@ gem 'jquery-rails'
 
 # To use debugger
 # gem 'debugger'
+
+gem "mongoid", ">= 3.0.11"
+gem "rspec-rails", ">= 2.11.4", :group => [:development, :test]
+gem "database_cleaner", ">= 0.9.1", :group => :test
+gem "mongoid-rspec", ">= 1.4.6", :group => :test
+gem "email_spec", ">= 1.4.0", :group => :test
+gem "sendgrid", ">= 1.0.1"
