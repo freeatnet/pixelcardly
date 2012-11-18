@@ -104,7 +104,7 @@ class PhotosController < ApplicationController
     end
 
     respond_to do |f|
-      f.json { render json: location_tags_to_tf.sort_by {|t| -1 * t[:value] }.take(20).collect {|t| t[:_id]} }
+      f.json { render json: location_tags_to_tf.sort_by {|t| -1 * t[:value] }.take(20).collect {|t| t[:_id]}.reject {|t| t.blank? } }
     end
   end
 
