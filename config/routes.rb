@@ -1,6 +1,7 @@
 Pixelcardly::Application.routes.draw do
   get '/' => 'home#index'
   get '/photos' => 'photos#index'
+  get '/tags' => 'photos#tags'
 
   # The priority is based upon order of creation:
   # first created -> highest priority.
