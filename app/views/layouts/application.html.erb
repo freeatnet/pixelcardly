@@ -1,14 +1,23 @@
 <!DOCTYPE html>
 <html>
 <head>
-  <title>Pixelcardly</title>
+  <title>Get Pixel Cards!</title>
   <%= stylesheet_link_tag    "application", :media => "all" %>
   <%= javascript_include_tag "application" %>
   <%= csrf_meta_tags %>
 </head>
 <body>
 
-<%= yield %>
-
+<div id="wrapper">
+	<div id="header">
+		<div class="branding">Everybody loves postcards!</div>
+	</div>
+	<div id="content">
+		<%= yield %>
+	</div>
+	<footer>
+		<p>Katya says there might be some text here.</p>
+	</footer>
+</div>
 </body>
 </html>
