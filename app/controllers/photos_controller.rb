@@ -47,7 +47,7 @@ class PhotosController < ApplicationController
         total_items: scope_count,
         total_pages: (scope_count / rpp),
         current_page: params[:page],
-        photos: photos
+        photos: photos.collect {|photo| p = photo.attributes; p[:author] = photo.author.attributes; p }
       }
     }
     end
