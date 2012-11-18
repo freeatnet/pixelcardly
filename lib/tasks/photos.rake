@@ -1,5 +1,13 @@
 namespace :photos do
   namespace :import do
+    task :ids, [:file_to_use] => [:environment]  do |task, args|
+      fh = File.open(args[:file_to_use], 'r')
+      fh.each do |line|
+        line.strip!
+        DetailsImporter.perform_async(line)
+      end
+    end
+
     task :tag, [:tag_to_import] => [:environment] do |task,args|
       tag = args[:tag_to_import]
       rpp = 100
